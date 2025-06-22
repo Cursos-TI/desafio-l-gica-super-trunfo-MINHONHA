@@ -1,1 +1,106 @@
+#include <stdio.h>
+
+int main (){
+    char Estado[50];
+    char Codigo[50];
+    char Cidade[50];
+    int populacao1;
+    int populacao2;
+    float Area;
+    float PIB;
+    int Numero_de_pontos_turisticos;
+    float Densidade;
+    float PIBP;
+
+    // DADOS DA PRIMERA CARTA 
+
+printf ("Digite seu Estado: ");
+scanf ("%s", Estado);
+
+printf ("Digite seu Codigo: ");
+scanf ("%s", Codigo);
+
+printf ("Digite sua Cidade: ");
+scanf ("%s", Cidade);
+
+printf ("Digite sua Populacao: ");
+scanf ("%d", &populacao1);
+
+printf ("Digite a Area em Km2: ");
+scanf ("%f", &Area);
+
+printf ("Digite o PIB: ");
+scanf ("%f", &PIB);
+
+printf ("Digite o Numero de pontos turisticos: ");
+scanf ("%d", &Numero_de_pontos_turisticos);
+
+Densidade =  populacao1 / Area;
+
+PIBP = PIB / populacao1;
+
+// EXIBIÇÃO DA PRIMEIRA CARTA
+
+printf ("\n *** CARTA NUMERO 01 *** \n");
+printf ("Codigo da Carta: %s\n", Codigo);
+printf ("Estado:%s\n", Estado);
+printf ("Nome da Cidade: %s\n", Cidade);
+printf ("Populacao: %d\n", populacao1);
+printf ("Area em KM2: %f\n", Area);
+printf ("PIB: %.2f\n", PIB);
+printf("Numero de Pontos Turisticos: %d\n", Numero_de_pontos_turisticos);
+printf("Densidade Populacional: %.3f\n", Densidade);
+printf("PIB per Capita: %.3f\n\n", PIBP);
+
+    // DADOS DA SEGUNDA CARTA 
+
+    printf ("Digite seu Estado: ");
+    scanf ("%s", Estado);
+    
+    printf ("Digite seu Codigo: ");
+    scanf ("%s", Codigo);
+    
+    printf ("Digite sua Cidade: ");
+    scanf ("%s", Cidade);
+    
+    printf ("Digite sua Populacao: ");
+    scanf ("%d", &populacao2);
+    
+    printf ("Digite a Area em Km2: ");
+    scanf ("%f", &Area);
+    
+    printf ("Digite o PIB: ");
+    scanf ("%f", &PIB);
+    
+    printf ("Digite o Numero de pontos turisticos: ");
+    scanf ("%d", &Numero_de_pontos_turisticos);
+
+    Densidade =  populacao2 / Area;
+
+    PIBP = PIB / populacao2;
+    
+    // EXIBIÇÃO DA SEGUNDA CARTA
+    
+printf ("\n *** CARTA NUMERO 02 *** \n");
+printf ("Codigo da Carta: %s\n", Codigo);
+printf ("Estado:%s\n", Estado);
+printf ("Nome da Cidade: %s\n", Cidade);
+printf ("Populacao: %d\n", populacao2);
+printf ("Area em KM2: %f\n", Area);
+printf ("PIB: %f\n", PIB);
+printf("Numero de Pontos Turisticos: %d\n", Numero_de_pontos_turisticos);
+printf("Densidade Populacional: %.3f\n", Densidade);
+printf("PIB per Capita: %.3f\n\n\n\n", PIBP);
+
+// LOGICA VENCEDORA (população) NIVEL BÁSICO //
+
+if(populacao1 > populacao2) {
+    printf("*** CARTA 01 VENCEU A RODADA! *** \n");
+}else{
+    printf("*** CARTA 02 VENCEU A RODADA! *** \n");
+}
+
+return 0;
+
+}
 
