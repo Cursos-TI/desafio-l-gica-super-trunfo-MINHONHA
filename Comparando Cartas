@@ -1,19 +1,35 @@
 #include <stdio.h>
 
 int main (){
+
+    /////////// CARTA 01 //////////
+
     char Estado[50];
     char Codigo[50];
     char Cidade[50];
-    int populacao1;
-    int populacao2;
+    int populacao;
     float Area;
     float PIB;
     int Numero_de_pontos_turisticos;
     float Densidade;
-    float PIBP;
+    float PIBPercapta;
+   
+
+    /////////// CARTA 02 ///////
+
+    char Estado2[50];
+    char Codigo2[50];
+    char Cidade2[50];
+    int populacao2;
+    float Area2;
+    float PIB2;
+    int Numero_de_pontos_turisticos2;
+    float Densidade2;
+    float PIBPercapta2;
+  
 
     // DADOS DA PRIMERA CARTA 
-
+printf ("-- Cadastro da Carta 01 -- \n");
 printf ("Digite seu Estado: ");
 scanf ("%s", Estado);
 
@@ -24,7 +40,7 @@ printf ("Digite sua Cidade: ");
 scanf ("%s", Cidade);
 
 printf ("Digite sua Populacao: ");
-scanf ("%d", &populacao1);
+scanf ("%d", &populacao);
 
 printf ("Digite a Area em Km2: ");
 scanf ("%f", &Area);
@@ -35,72 +51,77 @@ scanf ("%f", &PIB);
 printf ("Digite o Numero de pontos turisticos: ");
 scanf ("%d", &Numero_de_pontos_turisticos);
 
-Densidade =  populacao1 / Area;
+Densidade =  populacao / Area;
 
-PIBP = PIB / populacao1;
+PIBPercapta = PIB / populacao;
 
-// EXIBIÇÃO DA PRIMEIRA CARTA
-
-printf ("\n *** CARTA NUMERO 01 *** \n");
-printf ("Codigo da Carta: %s\n", Codigo);
-printf ("Estado:%s\n", Estado);
-printf ("Nome da Cidade: %s\n", Cidade);
-printf ("Populacao: %d\n", populacao1);
-printf ("Area em KM2: %f\n", Area);
-printf ("PIB: %.2f\n", PIB);
-printf("Numero de Pontos Turisticos: %d\n", Numero_de_pontos_turisticos);
-printf("Densidade Populacional: %.3f\n", Densidade);
-printf("PIB per Capita: %.3f\n\n", PIBP);
 
     // DADOS DA SEGUNDA CARTA 
-
+    printf ("-- Cadastro da Carta 02 -- \n");   
     printf ("Digite seu Estado: ");
-    scanf ("%s", Estado);
+    scanf ("%s", Estado2);
     
     printf ("Digite seu Codigo: ");
-    scanf ("%s", Codigo);
-    
+    scanf ("%s", Codigo2);
     printf ("Digite sua Cidade: ");
-    scanf ("%s", Cidade);
+    scanf ("%s", Cidade2);
     
     printf ("Digite sua Populacao: ");
     scanf ("%d", &populacao2);
     
     printf ("Digite a Area em Km2: ");
-    scanf ("%f", &Area);
+    scanf ("%f", &Area2);
     
     printf ("Digite o PIB: ");
-    scanf ("%f", &PIB);
+    scanf ("%f", &PIB2);
     
     printf ("Digite o Numero de pontos turisticos: ");
-    scanf ("%d", &Numero_de_pontos_turisticos);
+    scanf ("%d", &Numero_de_pontos_turisticos2);
 
-    Densidade =  populacao2 / Area;
+    Densidade2 =  populacao2 / Area2;
 
-    PIBP = PIB / populacao2;
+    PIBPercapta2 = PIB2 / populacao2;
+
+
+    // EXIBIÇÃO DA PRIMEIRA CARTA
+
+
+printf ("\n *** CARTA NUMERO 01 *** \n");
+printf ("Codigo da Carta: %s\n", Codigo);
+printf ("Estado:%s\n", Estado);
+printf ("Nome da Cidade: %s\n", Cidade);
+printf ("Populacao: %d\n", populacao);
+printf ("Area em KM2: %f\n", Area);
+printf ("PIB: %.2f\n", PIB);
+printf("Numero de Pontos Turisticos: %d\n", Numero_de_pontos_turisticos);
+printf("Densidade Populacional: %.3f\n", Densidade);
+printf("PIB per Capita: %.3f\n\n", PIBPercapta);
+
     
     // EXIBIÇÃO DA SEGUNDA CARTA
     
 printf ("\n *** CARTA NUMERO 02 *** \n");
-printf ("Codigo da Carta: %s\n", Codigo);
-printf ("Estado:%s\n", Estado);
-printf ("Nome da Cidade: %s\n", Cidade);
+printf ("Codigo da Carta: %s\n", Codigo2);
+printf ("Estado:%s\n", Estado2);
+printf ("Nome da Cidade: %s\n", Cidade2);
 printf ("Populacao: %d\n", populacao2);
-printf ("Area em KM2: %f\n", Area);
-printf ("PIB: %f\n", PIB);
-printf("Numero de Pontos Turisticos: %d\n", Numero_de_pontos_turisticos);
-printf("Densidade Populacional: %.3f\n", Densidade);
-printf("PIB per Capita: %.3f\n\n\n\n", PIBP);
+printf ("Area em KM2: %f\n", Area2);
+printf ("PIB: %f\n", PIB2);
+printf("Numero de Pontos Turisticos: %d\n", Numero_de_pontos_turisticos2);
+printf("Densidade Populacional: %.3f\n", Densidade2);
+printf("PIB per Capita: %.3f\n", PIBPercapta2);
 
-// LOGICA VENCEDORA (população) NIVEL BÁSICO //
+    //LOGICA NIVEL AVENTUREIRO (BASICO)
 
-if(populacao1 > populacao2) {
-    printf("*** CARTA 01 VENCEU A RODADA! *** \n");
+if(populacao > populacao2) {
+    printf("\n*** CARTA 01 VENCEU A RODADA! *** \n");
 }else{
-    printf("*** CARTA 02 VENCEU A RODADA! *** \n");
+    printf("\n*** CARTA 02 VENCEU A RODADA! *** \n");
 }
+
 
 return 0;
 
 }
+
 
